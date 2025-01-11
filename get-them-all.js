@@ -1,0 +1,4 @@
+export const getArchitects = () => [Array.from(document.getElementsByTagName("a")), Array.from(document.body.querySelectorAll(":not(a)")).filter((a) => a.tagName != "SCRIPT" && a.tagName != "DIV" && a.tagName != "BUTTON")]
+export const getClassical = () => [Array.from(document.getElementsByClassName("classical")), Array.from(document.body.querySelectorAll(":not(.classical)")).filter((a) => a.tagName != "SCRIPT" && a.tagName != "DIV" && a.tagName != "BUTTON")]
+export const getActive = () => [Array.from(document.querySelectorAll(".classical.active")), Array.from(document.querySelectorAll(".classical:not(.active)"))]
+export const getBonannoPisano = () => [document.getElementById("BonannoPisano"), Array.from(document.querySelectorAll("a:not(#BonannoPisano)"))]
